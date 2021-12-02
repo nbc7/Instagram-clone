@@ -1,0 +1,540 @@
+link {
+    display: none;
+}
+
+body,
+button,
+input,
+textarea {
+    color: rgba(38, 38, 38, 1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+body {
+    height: 100%;
+    background: #fff;
+    overflow-y: scroll;
+}
+
+section {
+    min-height: 100vh;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+main {
+    flex-grow: 1;
+    order: 4;
+}
+
+article,
+div,
+footer,
+header,
+main,
+section {
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+    border: 0 solid #000;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+main article {
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 32px auto 0;
+    max-width: 935px;
+    padding-bottom: 32px;
+    width: 100%;
+}
+
+.coluna-demo {
+    align-self: center;
+    background-image: url(./images/home-phones.png);
+    background-position: 0 0;
+    background-size: 454px 618px;
+    flex-basis: 454px;
+    height: 618px;
+    margin-left: -35px;
+    margin-right: -15px;
+}
+
+.screenshots {
+    margin: 99px 0 0 151px;
+    position: relative;
+}
+.screenshots img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 427px;
+    width: 240px;
+}
+
+#screenshot1 {
+    animation-name: fade;
+    animation-duration: 25s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+#screenshot2 {
+    animation-name: fade;
+    animation-duration: 25s;
+    animation-delay: -5s;
+    animation-iteration-count: infinite;
+}
+
+#screenshot3 {
+    animation-name: fade;
+    animation-duration: 25s;
+    animation-delay: -10s;
+    animation-iteration-count: infinite;
+}
+
+#screenshot4 {
+    animation-name: fade;
+    animation-duration: 25s;
+    animation-delay: -15s;
+    animation-iteration-count: infinite;
+}
+
+#screenshot5 {
+    animation-name: fade;
+    animation-duration: 25s;
+    animation-delay: -20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.coluna-acesso {
+    color: rgba(38, 38, 38, 1);
+    flex-grow: 1;
+    justify-content: center;
+    margin-top: 12px;
+    max-width: 350px;
+}
+
+.login {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(219, 219, 219, 1);
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+}
+
+.login h1 {
+    background-image: url(./images/sprite_core.png);
+    margin: 22px auto 12px;
+    background-repeat: no-repeat;
+    background-position: 0 -130px;
+    height: 51px;
+    width: 175px;
+    display: block;
+    overflow: hidden;
+    text-indent: 110%;
+    white-space: nowrap;
+}
+
+#loginDiv {
+    margin-bottom: 10px;
+    max-width: 350px;
+    width: 100%;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#loginFormDiv {
+    margin-top: 24px;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    display: flex;
+}
+
+.caixa-usuario,
+.caixa-senha {
+    margin: 0 40px 6px;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    display: flex;
+}
+
+.caixa-usuario div,
+.caixa-senha div {
+    align-items: center;
+    background: rgba(250, 250, 250, 1);
+    border: 1px solid rgba(219, 219, 219, 1);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: rgba(38, 38, 38, 1);
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+}
+
+.caixa-usuario label,
+.caixa-senha label {
+    display: flex;
+    height: 36px;
+    flex: 1 0 0;
+    padding: 0;
+    position: relative;
+    margin: 0;
+    min-width: 0;
+}
+
+.caixa-usuario span,
+.caixa-senha span {
+    color: rgba(142, 142, 142, 1);
+    font-size: 12px;
+    height: 36px;
+    left: 8px;
+    line-height: 36px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    text-overflow: ellipsis;
+    transform-origin: left;
+    transition: transform ease-out 0.1s;
+    user-select: none;
+    white-space: nowrap;
+}
+.caixa-usuario input,
+.caixa-senha input {
+    font-size: 16px;
+    background: rgba(250, 250, 250, 1);
+    border: 0;
+    flex: 1 0 auto;
+    margin: 0;
+    outline: 0;
+    overflow: hidden;
+    padding: 9px 0 7px 8px;
+    text-overflow: ellipsis;
+}
+
+.divisor-login {
+    margin: 10px 40px 18px;
+    flex-direction: row;
+}
+
+.divisor-linha {
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: rgba(219, 219, 219, 1);
+    height: 1px;
+    position: relative;
+    top: 0.45em;
+}
+
+.divisor-texto {
+    color: rgba(142, 142, 142, 1);
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    margin: 0 18px;
+    text-transform: uppercase;
+}
+
+.botao-entrar,
+.login-facebook {
+    margin: 8px 40px;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    display: flex;
+}
+
+.botao-entrar button div {
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    display: flex;
+}
+
+.botao-entrar button {
+    border: 1px solid transparent;
+    background-color: rgba(0, 149, 246, 1);
+
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 1);
+    position: relative;
+
+    appearance: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    padding: 5px 9px;
+    text-align: center;
+    text-transform: inherit;
+    text-overflow: ellipsis;
+    user-select: none;
+    width: auto;
+}
+
+.botao-entrar button:disabled {
+    background-color: rgba(0, 149, 246, .3);
+    opacity: 1;
+    pointer-events: none;
+}
+
+.login-facebook button {
+    border: 0;
+    color: rgba(0, 149, 246, 1);
+    display: inline;
+    padding: 0;
+    position: relative;
+
+    appearance: none;
+    background: 0 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    text-transform: inherit;
+    text-overflow: ellipsis;
+    user-select: none;
+    width: auto;
+}
+
+.login-facebook button span.icone {
+    background-image: url(./images/sprite_core.png);
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    top: 3px;
+    background-repeat: no-repeat;
+    background-position: -414px -259px;
+    height: 16px;
+    width: 16px;
+}
+
+#loginForm a,
+#loginForm a:hover,
+#loginForm a:active,
+#loginForm a:visited {
+    color: rgba(0, 55, 107, 1);
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.cadastro {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(219, 219, 219, 1);
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+}
+
+.cadastro div {
+    display: block;
+    color:rgba(142, 142, 142, 1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin: -3px 0 -4px;
+}
+
+.cadastro p {
+    color: rgba(38,38,38,1);
+    font-size: 14px;
+    margin: 15px;
+    text-align: center;
+}
+
+.cadastro p a {
+    color: rgba(0, 149, 246, 1);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.aplicativo p {
+    color: rgba(38,38,38,1);
+    font-size: 14px;
+    line-height: 18px;
+    margin: 10px 20px;
+    text-align: center;
+}
+
+.aplicativo div {
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.aplicativo div a {
+    color: rgba(0, 55, 107, 1);
+    text-decoration: none;
+}
+
+main,
+footer {
+    background-color: rgba(250, 250, 250, 1);
+}
+
+footer {
+    padding-left: 16px;
+    padding-right: 16px;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    display: flex;
+    order: 5;
+    padding: 0 20px;
+}
+
+.footer-div {
+    margin-bottom: 52px;
+}
+
+.footer-info {
+    margin-top: 24px;
+}
+
+.footer-linha {
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+    justify-content: center;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: stretch;
+    display: flex;
+}
+
+.footer-linha div {
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 12px;
+    justify-content: flex-start;
+}
+
+.footer-linha a,
+a:visited {
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    color: rgba(142, 142, 142, 1);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin: -2px 0 -3px;
+}
+
+.footer-copyright {
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    flex: 0 0 auto;
+    justify-content: center;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: stretch;
+    display: flex;
+}
+
+#copyright {
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    color: rgba(142, 142, 142, 1);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin: -2px 0 -3px;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+}
+
+.footer-selection {
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    color: rgba(142, 142, 142, 1);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin: -2px 0 -3px;
+}
+
+.footer-copyright span {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.footer-copyright select {
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.footer-selection-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-selection-icone-div {
+    margin-left: 4px;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-direction: column;
+    vertical-align: baseline;
+
+}
+
+.footer-selection svg {
+    display: block;
+    position: relative;
+}
